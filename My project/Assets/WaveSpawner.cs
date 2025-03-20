@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -9,7 +10,9 @@ public class WaveSpawner : MonoBehaviour
     //galima bus sunkint lygi ir skirtingus enemy
 
     public float timeBetweenWaves = 5f;
-    private float countdown = 2f;
+    private float countdown = 3f;
+
+    public Text waveCountdownText;
     private int waveIndex = 0;
 
 
@@ -23,10 +26,12 @@ public class WaveSpawner : MonoBehaviour
 
         }
         countdown -= Time.deltaTime;
+        waveCountdownText.text = Mathf.Round(countdown).ToString();
     }
 
     IEnumerator SpawnWave()
     {
+        waveIndex++;
         Debug.Log("Wave Inc");
         for (int i = 0; i < waveIndex; i++)
         {
@@ -34,7 +39,7 @@ public class WaveSpawner : MonoBehaviour
             SpawnEnemy();
             yield return new WaitForSeconds(0.5f);
         }
-        waveIndex++;
+        
     }
     
     void SpawnEnemy()
