@@ -202,7 +202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1b034b2d061ec9e48baaed866b176265, type: 3}
       propertyPath: m_Name
-      value: Turret 1
+      value: Standard Turret
       objectReference: {fileID: 0}
     - target: {fileID: 951636146637939270, guid: 1b034b2d061ec9e48baaed866b176265, type: 3}
       propertyPath: m_Name
@@ -213,7 +213,8 @@ PrefabInstance:
       value: Base
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 951636146637939270, guid: 1b034b2d061ec9e48baaed866b176265, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1b034b2d061ec9e48baaed866b176265, type: 3}
       insertIndex: 0

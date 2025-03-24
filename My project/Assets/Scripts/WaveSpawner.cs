@@ -10,7 +10,7 @@ public class WaveSpawner : MonoBehaviour
     //galima bus sunkint lygi ir skirtingus enemy
 
     public float timeBetweenWaves = 5f;
-    private float countdown = 3f;
+    private float countdown = 2f;
 
     public Text waveCountdownText;
     private int waveIndex = 0;
@@ -19,7 +19,7 @@ public class WaveSpawner : MonoBehaviour
 
     void Update()
     {
-        if(countdown <= 0)
+        if(countdown <= 0f)
         {
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
