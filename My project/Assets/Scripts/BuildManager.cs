@@ -21,16 +21,6 @@ public class BuildManager : MonoBehaviour
 
     public bool CanBuild { get { return turretToBuild != null; } }
 
-    /*public GameObject GetTurretToBuild()
-    {
-        return turretToBuild;
-    }*/
-
-    /*public void SetTurretToBuild(GameObject turret)
-    {
-        turretToBuild = turret;
-    }*/
-
     public void BuildTurretOn(Node node)
     {
         if(PlayerStats.Money < turretToBuild.cost)
