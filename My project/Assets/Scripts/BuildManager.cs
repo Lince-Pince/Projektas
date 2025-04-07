@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BuildManager : MonoBehaviour
+public class BuildManager : MonoBehaviour, IBuildManager
 {
     public static BuildManager instance;
 

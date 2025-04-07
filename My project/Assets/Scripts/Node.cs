@@ -12,7 +12,7 @@ public class Node : MonoBehaviour {
 
     private Renderer rend;
     private Color startColor;
-    BuildManager buildManager;
+    IBuildManager buildManager;
 
     void Start ()
     {
@@ -63,5 +63,10 @@ public class Node : MonoBehaviour {
     void OnMouseExit()
     {
         rend.material.color = startColor;
+    }
+
+    public void SetBuildManager(IBuildManager manager)
+    {
+        buildManager = manager;
     }
 }
