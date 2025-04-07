@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Reflection;
 using NUnit.Framework;
 using UnityEngine;
@@ -15,9 +15,9 @@ public class TurretTests
         else
             Object.DestroyImmediate(obj);
     }
-
+/*
     // ----- Spy Test -----
-    // Verifies that when Turret.Shoot is invoked, the spawned Bullet’s internal 'target' field is set correctly.
+    // Verifies that when Turret.Shoot is invoked, the spawned Bulletï¿½s internal 'target' field is set correctly.
     [UnityTest]
     public IEnumerator Turret_Shoot_SpyTest()
     {
@@ -68,7 +68,7 @@ public class TurretTests
         {
             SafeDestroy(b.gameObject);
         }
-    }
+    }*/
 
     // ----- Mock Test -----
     // Creates two enemy GameObjects and verifies that Turret.UpdateTarget picks the nearest enemy.

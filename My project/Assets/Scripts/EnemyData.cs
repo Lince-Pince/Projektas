@@ -10,16 +10,18 @@ public class EnemyData
         this.health = health;
         this.worth = worth;
         this.startSpeed = startSpeed;
-        this.speed = speed;
+        this.speed = startSpeed; // Fixing original constructor mistake too
     }
 
-    public bool TakeDamage(float amount)
+    // Marked virtual to allow overriding in tests (for mocking/stubbing/spying)
+    public virtual bool TakeDamage(float amount)
     {
         health -= amount;
         return health <= 0;
     }
 
-    public void Slow(float percentage)
+    // Marked virtual to allow override in tests
+    public virtual void Slow(float percentage)
     {
         speed = startSpeed * (1f - percentage);
     }
