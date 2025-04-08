@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
 
-/* UNIT, STUB, MOCK, SPY tests for EnemyData */
 public class EnemyDataTests
 {
     // UNIT TEST: Enemy dies when damage equals health

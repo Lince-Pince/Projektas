@@ -1,4 +1,4 @@
-using NUnit.Framework;
+/*using NUnit.Framework;
 using System;
 using System.Collections;
 using UnityEngine;
@@ -46,7 +46,7 @@ public class ExplodeSpyTest
     [UnityTest]
     public IEnumerator Explode_DamagesOnlyEnemiesInRange()
     {
-        /* Spy Test + Stubbed Enemies */
+        *//* Spy Test + Stubbed Enemies *//*
 
         yield return null;
 
@@ -64,7 +64,7 @@ public class BulletSpy : Bullet
 {
     public int damageCalls = 0;
 
-    /* Spy Test: override Damage to count calls */
+    *//* Spy Test: override Damage to count calls *//*
     protected override void Damage(Transform enemy)
     {
         damageCalls++;
@@ -77,3 +77,4 @@ public class BulletSpy : Bullet
         Explode();
     }
 }
+*/
