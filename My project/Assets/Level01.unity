@@ -9209,7 +9209,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9dfa329d28352d498d5ca86168a12cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roundsText: {fileID: 1248231792}
 --- !u!1 &982131161
 GameObject:
   m_ObjectHideFlags: 0
@@ -11448,6 +11447,7 @@ GameObject:
   - component: {fileID: 1248231793}
   - component: {fileID: 1248231792}
   - component: {fileID: 1248231791}
+  - component: {fileID: 1248231794}
   m_Layer: 5
   m_Name: Rounds
   m_TagString: Untagged
@@ -11531,6 +11531,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1248231789}
   m_CullTransparentMesh: 1
+--- !u!114 &1248231794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248231789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9c58fca5dd31da4d878830871ba2498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roundsText: {fileID: 1248231792}
 --- !u!1001 &1253182135
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13292,9 +13305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 978148200}
-  nextLevel: Level02
-  levelToUnlock: 2
-  sceneFader: {fileID: 1995167695}
+  completeLevelUI: {fileID: 0}
 --- !u!114 &1397605550
 MonoBehaviour:
   m_ObjectHideFlags: 0
