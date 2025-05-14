@@ -5,7 +5,11 @@ using UnityEngine.UI;
 public class WaveSpawner : MonoBehaviour
 {
 
-    public static  int EnemiesAlive = 0; 
+    public static int EnemiesAlive;
+    void Start()
+    {
+        EnemiesAlive = 0;
+    }
     public Wave[] waves;
     public Transform spawnPoint;
 
@@ -16,6 +20,8 @@ public class WaveSpawner : MonoBehaviour
 
     public Text waveCountdownText;
     private int waveIndex = 0;
+
+    public GameManager gameManager;
 
     // Make Update() callable from tests
     internal void Update()
@@ -44,6 +50,8 @@ public class WaveSpawner : MonoBehaviour
         PlayerStats.Rounds++;
 
         Wave wave = waves[waveIndex];
+
+        EnemiesAlive = wave.count;
         for (int i = 0; i < wave.count; i++)
         {
             SpawnEnemy(wave.enemy);
@@ -52,7 +60,7 @@ public class WaveSpawner : MonoBehaviour
         waveIndex++;
 
         if (waveIndex == waves.Length){
-            Debug.Log("LEVEL WON!");
+            gameManager.WinLevel();
             this.enabled = false;
         }
     }
@@ -60,6 +68,5 @@ public class WaveSpawner : MonoBehaviour
     void SpawnEnemy(GameObject enemy)
     {
         Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
-        EnemiesAlive++;
     }
 }
