@@ -31,28 +31,28 @@ public class CameraMovement : MonoBehaviour
             return;
         }
 
-        if (GetKeyDown(KeyCode.Escape))
+        if (GetKeyDown("escape"))
             doMovement = !doMovement;
 
         if (!doMovement)
             return;
 
-        if (GetKey("w") || GetMousePosition().y >= Screen.height - panBorderThickness)
+        if (GetKey("w") || GetKey("up"))
         {
             transform.Translate(Vector3.forward * panSpeed * Time.deltaTime, Space.World);
         }
 
-        if (GetKey("s") || GetMousePosition().y <= panBorderThickness)
+        if (GetKey("s") || GetKey("down"))
         {
             transform.Translate(Vector3.back * panSpeed * Time.deltaTime, Space.World);
         }
 
-        if (GetKey("d") || GetMousePosition().x >= Screen.width - panBorderThickness)
+        if (GetKey("d") || GetKey("right"))
         {
             transform.Translate(Vector3.right * panSpeed * Time.deltaTime, Space.World);
         }
 
-        if (GetKey("a") || GetMousePosition().x <= panBorderThickness)
+        if (GetKey("a") || GetKey("left"))
         {
             transform.Translate(Vector3.left * panSpeed * Time.deltaTime, Space.World);
         }
@@ -70,14 +70,9 @@ public class CameraMovement : MonoBehaviour
         return simulateInput ? simulatedGetKey : Input.GetKey(key);  // [MOCK]
     }
 
-    protected virtual bool GetKeyDown(KeyCode key)
+    protected virtual bool GetKeyDown(string key)
     {
-        return simulateInput && key == KeyCode.Escape ? simulatedGetKeyDown : Input.GetKeyDown(key);  // [MOCK]
-    }
-
-    protected virtual Vector3 GetMousePosition()
-    {
-        return simulateInput ? simulatedMousePosition : Input.mousePosition;  // [MOCK]
+        return simulateInput && key == "escape" ? simulatedGetKeyDown : Input.GetKeyDown(key);  // [MOCK]
     }
 
     protected virtual float GetAxis(string axisName)

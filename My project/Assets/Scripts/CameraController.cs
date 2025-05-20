@@ -11,7 +11,6 @@ public class CameraController : MonoBehaviour
     public float minY = 10f;
     public float maxY = 80f;
 
-    // Deklaruojame Update() kaip protected virtual, kad jį būtų galima perrašyti ir iškviesti iš paveldėtų klasių.
     protected virtual void Update()
     {
         if (GameManager.GameIsOver)
@@ -20,39 +19,38 @@ public class CameraController : MonoBehaviour
             return;
         }
 
-        if (GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown("escape"))
             doMovement = !doMovement;
 
         if (!doMovement)
             return;
 
-        if (GetKey("w") || GetMousePosition().y >= Screen.height - panBorderThickness)
+        if (Input.GetKey("w") || Input.GetKey("up"))
         {
             transform.Translate(Vector3.forward * panSpeed * Time.deltaTime, Space.World);
         }
 
-        if (GetKey("s") || GetMousePosition().y <= panBorderThickness)
+        if (Input.GetKey("s") || Input.GetKey("down"))
         {
             transform.Translate(Vector3.back * panSpeed * Time.deltaTime, Space.World);
         }
 
-        if (GetKey("d") || GetMousePosition().x >= Screen.width - panBorderThickness)
+        if (Input.GetKey("d") || Input.GetKey("right"))
         {
             transform.Translate(Vector3.right * panSpeed * Time.deltaTime, Space.World);
         }
 
-        if (GetKey("a") || GetMousePosition().x <= panBorderThickness)
+        if (Input.GetKey("a") || Input.GetKey("left"))
         {
             transform.Translate(Vector3.left * panSpeed * Time.deltaTime, Space.World);
         }
 
-        float scroll = GetAxis("Mouse ScrollWheel");
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
         Vector3 pos = transform.position;
         pos.y -= scroll * 1000 * scrollSpeed * Time.deltaTime;
         pos.y = Mathf.Clamp(pos.y, minY, maxY);
         transform.position = pos;
     }
-
     // Virtualūs metodai, kuriuos galima perrašyti testavimo tikslais
     protected virtual bool GetKey(string key)
     {
