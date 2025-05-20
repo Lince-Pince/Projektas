@@ -2287,6 +2287,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9dfa329d28352d498d5ca86168a12cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneFader: {fileID: 0}
+  menuSceneName: MainMenu
 --- !u!1001 &232924254
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9491,6 +9493,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9dfa329d28352d498d5ca86168a12cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneFader: {fileID: 1995167695}
+  menuSceneName: MainMenu
 --- !u!1 &982131161
 GameObject:
   m_ObjectHideFlags: 0
