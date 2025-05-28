@@ -4,8 +4,8 @@ public class CompleteLevel : MonoBehaviour
 {
     public string menuSceneName = "MainMenu";
 
-    public string nextLevel = "Level02";
-    public int levelToUnlock = 2;
+    public string nextLevel = "Level4";
+    public int levelToUnlock = 4;
 
     public SceneFader sceneFader;
 
