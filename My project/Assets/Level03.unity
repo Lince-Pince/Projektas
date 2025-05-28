@@ -16410,8 +16410,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuSceneName: MainMenu
-  nextLevel: Level02
-  levelToUnlock: 2
+  nextLevel: Level04
+  levelToUnlock: 4
   sceneFader: {fileID: 1995167695}
 --- !u!1001 &1696403358
 PrefabInstance:
