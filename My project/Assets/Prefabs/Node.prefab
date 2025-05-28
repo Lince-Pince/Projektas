@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1528128540554561786}
   - component: {fileID: 7884312501216252227}
   - component: {fileID: 4686799217433780488}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c240d10818f505340acddbcabf1ce39e, type: 2}
+  - {fileID: 2100000, guid: 497a7af96d55ad74aa7f3d831d8e6a9a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -121,8 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e7f9f2d924aba4f9e8bd3664cbee49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.6981132, g: 0.68823427, b: 0.68823427, a: 0}
-  notEnoughMoneyColor: {r: 0.85660374, g: 0.14707723, b: 0.14707723, a: 1}
+  hoverColor: {r: 0.3813482, g: 0.5525606, b: 0.16904475, a: 0.94509804}
+  notEnoughMoneyColor: {r: 0.85490197, g: 0.34710768, b: 0.14901961, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   turretBlueprint:

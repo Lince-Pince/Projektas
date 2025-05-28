@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -16,7 +16,9 @@ public class WaveSpawner : MonoBehaviour
     public float timeBetweenWaves = 5f;
 
     // Make countdown accessible to tests
-    internal float countdown = 2f;
+     internal float countdown = 2f;
+    private float totalTime = 0f;     // skaičiuoja bendrą laiką
+
 
     public Text waveCountdownText;
     private int waveIndex = 0;
@@ -24,8 +26,10 @@ public class WaveSpawner : MonoBehaviour
     public GameManager gameManager;
 
     // Make Update() callable from tests
-    internal void Update()
+    void Update()
     {
+        totalTime += Time.deltaTime;
+        waveCountdownText.text = string.Format("{0:00.00}", totalTime);
 
         if (EnemiesAlive > 0)
         {
@@ -36,6 +40,7 @@ public class WaveSpawner : MonoBehaviour
         {
             gameManager.WinLevel();
             this.enabled = false;
+            return;
         }
 
         if (countdown <= 0f)
@@ -47,9 +52,8 @@ public class WaveSpawner : MonoBehaviour
 
         countdown -= Time.deltaTime;
         countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
-
-        waveCountdownText.text = string.Format("{0:00.00}", countdown);
     }
+
 
     public IEnumerator SpawnWave()
     {

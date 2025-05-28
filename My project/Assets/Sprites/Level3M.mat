@@ -7,12 +7,12 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: End
+  m_Name: Level3M
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_Parent: {fileID: -6238875579326457556, guid: a0adecf077458e149bd1d86ea96150a3, type: 3}
+  m_Parent: {fileID: 2100000, guid: 5f3504e468601254a88b6b1be2d7ab6f, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _METALLICSPECGLOSSMAP
+  - _DETAIL_MULX2
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -26,27 +26,18 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 3db775cf35bc7f24593e7d58737acbe9, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 3db775cf35bc7f24593e7d58737acbe9, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 3db775cf35bc7f24593e7d58737acbe9, type: 3}
-        m_Scale: {x: 1, y: 1}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 2800000, guid: f1703e27e534fba4486efcda9e0035a9, type: 3}
+        m_Scale: {x: 100, y: 100}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats:
-    - _Smoothness: 0
+    m_Floats: []
     m_Colors:
-    - _BaseColor: {r: 0.5978951, g: 0.89218324, b: 0.57114154, a: 1}
-    - _Color: {r: 0.5978951, g: 0.89218324, b: 0.57114154, a: 1}
+    - _BaseColor: {r: 0.27223712, g: 0.27223712, b: 0.27223712, a: 1}
+    - _Color: {r: 0.2722371, g: 0.2722371, b: 0.2722371, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &300403291033555629
+--- !u!114 &6465382729837287935
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
